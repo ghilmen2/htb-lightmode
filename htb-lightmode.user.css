@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.7
+@version        1.0.8
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -786,6 +786,26 @@
   [class*="command-line" i] :is(span, mark, code, kbd, samp) {
     background-color: transparent !important;
     box-shadow: none !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 4
+     ========================================================================== */
+
+  :root {
+    --htb-question-bank-text: #f8fafc;
+    --htb-question-bank-muted: #cbd5e1;
+  }
+
+  #questions-list .collapse-content h3.text-primary,
+  #questions-list .collapse-content .text-primary {
+    color: var(--htb-question-bank-text) !important;
+  }
+
+  #questions-list .collapse-title,
+  #questions-list .collapse-title :is(h1, h2, h3, h4, h5, h6, p, span, strong),
+  #questions-list .collapse-content :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-question-bank-muted) !important;
   }
 
 }

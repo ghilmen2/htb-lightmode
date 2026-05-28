@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.8
+
+- Added a scoped `#questions-list` override for Academy question text based on the observed DOM structure.
+
 ### 1.0.7
 
 - Reverted broad question-bank text overrides that leaked into normal Academy lesson content; kept terminal output cleanup.
