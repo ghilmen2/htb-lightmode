@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.5
+@version        1.0.6
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -832,6 +832,39 @@
   main :is(div, section, article)[class]:has(> form textarea[placeholder*="answer" i])
     :is(p, span, label, strong) {
     color: var(--htb-question-dark-text) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 4
+     ========================================================================== */
+
+  main :is(div, section, article)[class]:has(input[placeholder*="answer" i])
+    > :is(div, p, span, label, strong):not(:has(input, textarea, button, select)),
+  main :is(div, section, article)[class]:has(textarea[placeholder*="answer" i])
+    > :is(div, p, span, label, strong):not(:has(input, textarea, button, select)),
+  main :is(div, section, article)[class]:has(input[placeholder*="answer" i])
+    > :is(div, p, span, label, strong):not(:has(input, textarea, button, select)) *,
+  main :is(div, section, article)[class]:has(textarea[placeholder*="answer" i])
+    > :is(div, p, span, label, strong):not(:has(input, textarea, button, select)) * {
+    color: var(--htb-question-dark-text) !important;
+  }
+
+  main :is(div, section, article)[class]:has(input[placeholder*="answer" i])
+    :is([class*="collapse" i], [class*="accordion" i], [class*="body" i], [class*="content" i])
+    :is(div, p, span, label, strong):not(:has(input, textarea, button, select)),
+  main :is(div, section, article)[class]:has(textarea[placeholder*="answer" i])
+    :is([class*="collapse" i], [class*="accordion" i], [class*="body" i], [class*="content" i])
+    :is(div, p, span, label, strong):not(:has(input, textarea, button, select)) {
+    color: var(--htb-question-dark-text) !important;
+  }
+
+  main :is(div, section, article)[class]:has(input[placeholder*="answer" i])
+    :is([class*="collapse" i], [class*="accordion" i], [class*="body" i], [class*="content" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  main :is(div, section, article)[class]:has(textarea[placeholder*="answer" i])
+    :is([class*="collapse" i], [class*="accordion" i], [class*="body" i], [class*="content" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-question-dark-muted) !important;
   }
 
 }

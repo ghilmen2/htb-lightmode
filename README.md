@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.6
+
+- Strengthened text-only contrast for Academy answer/question panels without changing terminal styling or panel backgrounds.
+
 ### 1.0.5
 
 - Removed inline highlight backgrounds inside terminal output and added text-only contrast fixes for dark Academy question panels.
