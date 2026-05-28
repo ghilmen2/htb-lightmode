@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.11
+
+- Added scoped dashboard rank card styling for the main Academy profile card.
+
 ### 1.0.10
 
 - Removed the light background from the Pwnbox tab/header while keeping scoped Pwnbox text contrast.

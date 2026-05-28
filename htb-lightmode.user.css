@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.10
+@version        1.0.11
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -844,6 +844,60 @@
   #connection-panel button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"]
     :is(.text-primary, .text-secondary) {
     color: var(--htb-pwnbox-text) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 6
+     ========================================================================== */
+
+  :root {
+    --htb-rank-card-bg: #0f172a;
+    --htb-rank-card-surface: #172235;
+    --htb-rank-card-surface-strong: #1f2d44;
+    --htb-rank-card-text: #f8fafc;
+    --htb-rank-card-muted: #cbd5e1;
+    --htb-rank-card-border: #334155;
+  }
+
+  [class*="htb-xp-rank-card"] .rank-elements-container {
+    background-color: var(--htb-rank-card-bg) !important;
+    color: var(--htb-rank-card-text) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .rank-info,
+  [class*="htb-xp-rank-card"] .rank-info header,
+  [class*="htb-xp-rank-card"] .level-title-grade-container {
+    background-color: transparent !important;
+    color: var(--htb-rank-card-text) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .rank-info :is(.htb-text-primary, .htb-heading-lg, .htb-body-md) {
+    color: var(--htb-rank-card-text) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .rank-info :is(.htb-text-secondary, .htb-body-sm, .htb-body-lg) {
+    color: var(--htb-rank-card-muted) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .level-title-container,
+  [class*="htb-xp-rank-card"] .grade-container {
+    background-color: var(--htb-rank-card-surface) !important;
+    border: 1px solid var(--htb-rank-card-border) !important;
+    color: var(--htb-rank-card-text) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .grade-container {
+    background-color: var(--htb-rank-card-surface-strong) !important;
+  }
+
+  [class*="htb-xp-rank-card"] .rank-card-grade,
+  [class*="htb-xp-rank-card"] .grade-diamonds-container,
+  [class*="htb-xp-rank-card"] .grade-diamonds-inner-container {
+    background-color: transparent !important;
+  }
+
+  [class*="htb-xp-rank-card"] .grade-diamond {
+    border-color: var(--htb-rank-card-muted) !important;
   }
 
 }
