@@ -1,0 +1,518 @@
+/* ==UserStyle==
+@name           HTB Light Mode
+@namespace      github.com/gabriel/htb-lightmode
+@version        1.0.0
+@description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
+@author         Gabriel
+@homepageURL    https://github.com/gabriel/htb-lightmode
+@supportURL     https://github.com/gabriel/htb-lightmode/issues
+@license        MIT
+==/UserStyle== */
+
+@-moz-document domain("hackthebox.com"),
+  domain("app.hackthebox.com"),
+  domain("academy.hackthebox.com") {
+  /* ==========================================================================
+     Design Tokens
+     ========================================================================== */
+
+  :root {
+    color-scheme: light;
+
+    --htb-bg: #f6f8fb;
+    --htb-bg-elevated: #ffffff;
+    --htb-bg-muted: #eef3f7;
+    --htb-bg-subtle: #f9fbfd;
+
+    --htb-text: #18212f;
+    --htb-text-muted: #526071;
+    --htb-text-soft: #718095;
+    --htb-text-inverse: #ffffff;
+
+    --htb-border: #d8e0e8;
+    --htb-border-strong: #bfccd8;
+
+    --htb-accent: #8cc63f;
+    --htb-accent-strong: #6aa52b;
+    --htb-accent-soft: #e7f4d8;
+    --htb-accent-muted: #f2faeb;
+
+    --htb-info: #2563eb;
+    --htb-info-soft: #eaf1ff;
+    --htb-success: #168a45;
+    --htb-success-soft: #e7f7ed;
+    --htb-warning: #b7791f;
+    --htb-warning-soft: #fff6db;
+    --htb-danger: #d33f49;
+    --htb-danger-soft: #ffecef;
+
+    --htb-shadow-sm: 0 1px 2px rgb(24 33 47 / 8%);
+    --htb-shadow-md: 0 10px 24px rgb(24 33 47 / 10%);
+
+    --htb-radius-sm: 4px;
+    --htb-radius-md: 8px;
+  }
+
+  /* ==========================================================================
+     Base
+     ========================================================================== */
+
+  html,
+  body,
+  #root,
+  #__next,
+  .app,
+  .layout,
+  main {
+    background: var(--htb-bg) !important;
+    color: var(--htb-text) !important;
+  }
+
+  body {
+    scrollbar-color: var(--htb-border-strong) var(--htb-bg-muted);
+  }
+
+  ::selection {
+    background: var(--htb-accent-soft) !important;
+    color: var(--htb-text) !important;
+  }
+
+  a {
+    color: var(--htb-accent-strong) !important;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--htb-success) !important;
+  }
+
+  hr {
+    border-color: var(--htb-border) !important;
+  }
+
+  /* ==========================================================================
+     Layout Surfaces
+     ========================================================================== */
+
+  header,
+  nav,
+  aside,
+  footer,
+  section,
+  article,
+  .card,
+  .panel,
+  .modal-content,
+  .dropdown-menu,
+  .popover,
+  .offcanvas,
+  .table,
+  .list-group,
+  .accordion,
+  [class*="card"],
+  [class*="panel"],
+  [class*="modal"],
+  [class*="dropdown"],
+  [class*="sidebar"],
+  [class*="navbar"] {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  .card,
+  .panel,
+  .modal-content,
+  .dropdown-menu,
+  .popover,
+  [class*="card"],
+  [class*="panel"] {
+    box-shadow: var(--htb-shadow-sm) !important;
+  }
+
+  .bg-dark,
+  .bg-black,
+  .bg-gray,
+  .bg-grey,
+  .bg-secondary,
+  [class*="bg-dark"],
+  [class*="bg-black"],
+  [class*="bg-gray"],
+  [class*="bg-grey"],
+  [class*="dark-bg"] {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-text) !important;
+  }
+
+  .border,
+  .border-top,
+  .border-end,
+  .border-bottom,
+  .border-start,
+  [class*="border"] {
+    border-color: var(--htb-border) !important;
+  }
+
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li,
+  label,
+  small,
+  strong,
+  em,
+  td,
+  th,
+  div {
+    color: inherit;
+  }
+
+  .text-white,
+  .text-light,
+  .text-muted,
+  .text-secondary,
+  [class*="text-white"],
+  [class*="text-light"],
+  [class*="text-muted"],
+  [class*="text-secondary"] {
+    color: var(--htb-text-muted) !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title,
+  .heading,
+  [class*="title"],
+  [class*="heading"] {
+    color: var(--htb-text) !important;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  /* ==========================================================================
+     Navigation
+     ========================================================================== */
+
+  .navbar,
+  .sidebar,
+  .side-menu,
+  .topbar,
+  [class*="navbar"],
+  [class*="sidebar"],
+  [class*="side-menu"],
+  [class*="topbar"] {
+    background-color: var(--htb-bg-elevated) !important;
+    border-color: var(--htb-border) !important;
+    box-shadow: var(--htb-shadow-sm) !important;
+  }
+
+  .nav-link,
+  .menu-link,
+  .sidebar-link,
+  [class*="nav-link"],
+  [class*="menu-link"],
+  [class*="sidebar-link"] {
+    color: var(--htb-text-muted) !important;
+  }
+
+  .nav-link.active,
+  .nav-link:hover,
+  .menu-link.active,
+  .menu-link:hover,
+  .sidebar-link.active,
+  .sidebar-link:hover,
+  [class*="nav-link"].active,
+  [class*="menu-link"].active,
+  [class*="sidebar-link"].active {
+    background-color: var(--htb-accent-soft) !important;
+    color: var(--htb-accent-strong) !important;
+  }
+
+  /* ==========================================================================
+     Buttons and Controls
+     ========================================================================== */
+
+  button,
+  .btn,
+  input,
+  select,
+  textarea,
+  .form-control,
+  .form-select,
+  [role="button"] {
+    border-color: var(--htb-border-strong) !important;
+    border-radius: var(--htb-radius-sm) !important;
+  }
+
+  input,
+  select,
+  textarea,
+  .form-control,
+  .form-select {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-text) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--htb-text-soft) !important;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--htb-accent) !important;
+    box-shadow: 0 0 0 0.2rem rgb(140 198 63 / 22%) !important;
+    outline: none !important;
+  }
+
+  .btn-primary,
+  .btn-success,
+  .btn-htb,
+  [class*="btn-primary"],
+  [class*="btn-success"],
+  [class*="btn-htb"] {
+    background-color: var(--htb-accent) !important;
+    border-color: var(--htb-accent) !important;
+    color: var(--htb-text) !important;
+  }
+
+  .btn-primary:hover,
+  .btn-success:hover,
+  .btn-htb:hover,
+  [class*="btn-primary"]:hover,
+  [class*="btn-success"]:hover,
+  [class*="btn-htb"]:hover {
+    background-color: var(--htb-accent-strong) !important;
+    border-color: var(--htb-accent-strong) !important;
+    color: var(--htb-text-inverse) !important;
+  }
+
+  .btn-outline-primary,
+  .btn-outline-success,
+  [class*="btn-outline"] {
+    background-color: transparent !important;
+    border-color: var(--htb-border-strong) !important;
+    color: var(--htb-text-muted) !important;
+  }
+
+  .btn-outline-primary:hover,
+  .btn-outline-success:hover,
+  [class*="btn-outline"]:hover {
+    background-color: var(--htb-accent-soft) !important;
+    border-color: var(--htb-accent) !important;
+    color: var(--htb-accent-strong) !important;
+  }
+
+  /* ==========================================================================
+     Tables and Lists
+     ========================================================================== */
+
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  th,
+  .table {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  thead,
+  th,
+  .table-header,
+  [class*="table-header"] {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-text) !important;
+  }
+
+  tr:hover,
+  .table-hover tbody tr:hover,
+  .list-group-item:hover,
+  [class*="list-item"]:hover {
+    background-color: var(--htb-bg-subtle) !important;
+  }
+
+  .list-group-item,
+  [class*="list-item"] {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  /* ==========================================================================
+     Badges, Alerts, and Progress
+     ========================================================================== */
+
+  .badge,
+  .tag,
+  .chip,
+  [class*="badge"],
+  [class*="tag"],
+  [class*="chip"] {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-text-muted) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  .badge-success,
+  .text-success,
+  [class*="success"] {
+    color: var(--htb-success) !important;
+  }
+
+  .badge-warning,
+  .text-warning,
+  [class*="warning"] {
+    color: var(--htb-warning) !important;
+  }
+
+  .badge-danger,
+  .text-danger,
+  .text-error,
+  [class*="danger"],
+  [class*="error"] {
+    color: var(--htb-danger) !important;
+  }
+
+  .alert-success,
+  [class*="alert-success"] {
+    background-color: var(--htb-success-soft) !important;
+    color: var(--htb-success) !important;
+    border-color: color-mix(in srgb, var(--htb-success) 30%, white) !important;
+  }
+
+  .alert-warning,
+  [class*="alert-warning"] {
+    background-color: var(--htb-warning-soft) !important;
+    color: var(--htb-warning) !important;
+    border-color: color-mix(in srgb, var(--htb-warning) 30%, white) !important;
+  }
+
+  .alert-danger,
+  .alert-error,
+  [class*="alert-danger"],
+  [class*="alert-error"] {
+    background-color: var(--htb-danger-soft) !important;
+    color: var(--htb-danger) !important;
+    border-color: color-mix(in srgb, var(--htb-danger) 30%, white) !important;
+  }
+
+  .progress,
+  [class*="progress"] {
+    background-color: var(--htb-bg-muted) !important;
+  }
+
+  .progress-bar,
+  [class*="progress-bar"] {
+    background-color: var(--htb-accent) !important;
+    color: var(--htb-text) !important;
+  }
+
+  /* ==========================================================================
+     HTB-Specific Content
+     ========================================================================== */
+
+  .machine-card,
+  .challenge-card,
+  .module-card,
+  .academy-card,
+  .lab-card,
+  [class*="machine-card"],
+  [class*="challenge-card"],
+  [class*="module-card"],
+  [class*="academy-card"],
+  [class*="lab-card"] {
+    background-color: var(--htb-bg-elevated) !important;
+    border: 1px solid var(--htb-border) !important;
+    border-radius: var(--htb-radius-md) !important;
+    box-shadow: var(--htb-shadow-sm) !important;
+  }
+
+  .terminal,
+  .console,
+  .code-editor,
+  [class*="terminal"],
+  [class*="console"],
+  [class*="code-editor"] {
+    background-color: #f8fafc !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-border) !important;
+  }
+
+  .difficulty-easy,
+  [class*="difficulty-easy"] {
+    color: var(--htb-success) !important;
+  }
+
+  .difficulty-medium,
+  [class*="difficulty-medium"] {
+    color: var(--htb-warning) !important;
+  }
+
+  .difficulty-hard,
+  .difficulty-insane,
+  [class*="difficulty-hard"],
+  [class*="difficulty-insane"] {
+    color: var(--htb-danger) !important;
+  }
+
+  /* ==========================================================================
+     Overlays and Scrollbars
+     ========================================================================== */
+
+  .modal-backdrop,
+  .overlay,
+  [class*="backdrop"],
+  [class*="overlay"] {
+    background-color: rgb(24 33 47 / 38%) !important;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--htb-border-strong) var(--htb-bg-muted);
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--htb-bg-muted);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--htb-border-strong);
+    border: 2px solid var(--htb-bg-muted);
+    border-radius: 999px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--htb-text-soft);
+  }
+}
