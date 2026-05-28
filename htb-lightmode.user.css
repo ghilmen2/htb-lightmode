@@ -515,4 +515,186 @@
   *::-webkit-scrollbar-thumb:hover {
     background: var(--htb-text-soft);
   }
+
+  /* ==========================================================================
+     Fix pass 1
+     ========================================================================== */
+
+  :root {
+    --htb-hover-bg: #f3f8ee;
+    --htb-hover-text: #1f2a37;
+    --htb-question-bg: #ffffff;
+    --htb-question-border: #cbd7e3;
+    --htb-terminal-bg: #111827;
+    --htb-terminal-text: #e5edf6;
+    --htb-terminal-muted: #a9b7c8;
+    --htb-terminal-border: #2d3a4f;
+    --htb-hero-bg: #263241;
+    --htb-hero-text: #ffffff;
+    --htb-hero-muted: #d6e0ea;
+  }
+
+  .card:hover,
+  .panel:hover,
+  .machine-card:hover,
+  .challenge-card:hover,
+  .module-card:hover,
+  .academy-card:hover,
+  .lab-card:hover,
+  [class*="card" i]:hover,
+  [class*="panel" i]:hover {
+    background-color: var(--htb-bg-elevated) !important;
+    color: var(--htb-hover-text) !important;
+    border-color: var(--htb-border-strong) !important;
+  }
+
+  .btn:hover,
+  button:hover,
+  [role="button"]:hover {
+    color: inherit !important;
+  }
+
+  .btn-primary:hover,
+  .btn-success:hover,
+  .btn-htb:hover,
+  [class*="btn-primary" i]:hover,
+  [class*="btn-success" i]:hover,
+  [class*="btn-htb" i]:hover {
+    background-color: var(--htb-accent-strong) !important;
+    border-color: var(--htb-accent-strong) !important;
+    color: var(--htb-text-inverse) !important;
+  }
+
+  .nav-link:hover,
+  .menu-link:hover,
+  .sidebar-link:hover,
+  [class*="nav-link" i]:hover,
+  [class*="menu-link" i]:hover,
+  [class*="sidebar-link" i]:hover {
+    background-color: var(--htb-hover-bg) !important;
+    color: var(--htb-accent-strong) !important;
+  }
+
+  .question,
+  .answer,
+  .question-panel,
+  .answer-panel,
+  .question-card,
+  .answer-card,
+  [class*="question" i],
+  [class*="answer" i],
+  [class*="assessment" i],
+  [class*="quiz" i] {
+    background-color: var(--htb-question-bg) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-question-border) !important;
+  }
+
+  .question *,
+  .answer *,
+  .question-panel *,
+  .answer-panel *,
+  .question-card *,
+  .answer-card *,
+  [class*="question" i] *,
+  [class*="answer" i] *,
+  [class*="assessment" i] *,
+  [class*="quiz" i] * {
+    color: inherit !important;
+  }
+
+  .question input,
+  .answer input,
+  .question textarea,
+  .answer textarea,
+  [class*="question" i] input,
+  [class*="answer" i] input,
+  [class*="question" i] textarea,
+  [class*="answer" i] textarea {
+    background-color: var(--htb-bg-subtle) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-question-border) !important;
+  }
+
+  .terminal,
+  .console,
+  .code-editor,
+  .pwnbox,
+  [class*="terminal" i],
+  [class*="console" i],
+  [class*="code-editor" i],
+  [class*="pwnbox" i],
+  [class*="interactive" i] {
+    background-color: var(--htb-terminal-bg) !important;
+    color: var(--htb-terminal-text) !important;
+    border-color: var(--htb-terminal-border) !important;
+  }
+
+  .terminal *,
+  .console *,
+  .code-editor *,
+  .pwnbox *,
+  [class*="terminal" i] *,
+  [class*="console" i] *,
+  [class*="code-editor" i] *,
+  [class*="pwnbox" i] *,
+  [class*="interactive" i] * {
+    color: inherit !important;
+  }
+
+  .terminal .text-muted,
+  .console .text-muted,
+  .code-editor .text-muted,
+  .pwnbox .text-muted,
+  [class*="terminal" i] [class*="muted" i],
+  [class*="console" i] [class*="muted" i],
+  [class*="code-editor" i] [class*="muted" i],
+  [class*="pwnbox" i] [class*="muted" i],
+  [class*="interactive" i] [class*="muted" i] {
+    color: var(--htb-terminal-muted) !important;
+  }
+
+  .module-hero,
+  .path-hero,
+  .module-header,
+  .path-header,
+  .hero,
+  [class*="module-hero" i],
+  [class*="path-hero" i],
+  [class*="module-header" i],
+  [class*="path-header" i] {
+    background-color: var(--htb-hero-bg) !important;
+    color: var(--htb-hero-text) !important;
+  }
+
+  .module-hero *,
+  .path-hero *,
+  .module-header *,
+  .path-header *,
+  [class*="module-hero" i] *,
+  [class*="path-hero" i] *,
+  [class*="module-header" i] *,
+  [class*="path-header" i] * {
+    color: inherit !important;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero h3,
+  .hero h4,
+  .hero h5,
+  .hero h6 {
+    color: var(--htb-hero-text) !important;
+  }
+
+  .module-hero .text-muted,
+  .path-hero .text-muted,
+  .module-header .text-muted,
+  .path-header .text-muted,
+  [class*="module-hero" i] [class*="muted" i],
+  [class*="path-hero" i] [class*="muted" i],
+  [class*="module-header" i] [class*="muted" i],
+  [class*="path-header" i] [class*="muted" i] {
+    color: var(--htb-hero-muted) !important;
+  }
 }
