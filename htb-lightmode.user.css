@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.2
+@version        1.0.3
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -926,5 +926,133 @@
   [class*="question" i] pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output),
   [class*="answer" i] pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output) {
     color: var(--htb-code-output) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 3
+     ========================================================================== */
+
+  :root {
+    --htb-question-dark-bg: #111827;
+    --htb-question-dark-header: #162235;
+    --htb-question-dark-text: #f8fafc;
+    --htb-question-dark-muted: #cbd5e1;
+    --htb-question-dark-border: #475569;
+    --htb-question-input-bg: #ffffff;
+    --htb-question-input-text: #111827;
+    --htb-pwnbox-panel-bg: #111827;
+    --htb-pwnbox-control-bg: #1f2937;
+    --htb-pwnbox-text: #f8fafc;
+    --htb-pwnbox-muted: #cbd5e1;
+  }
+
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i]),
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i]) {
+    background-color: var(--htb-question-dark-bg) !important;
+    color: var(--htb-question-dark-text) !important;
+    border-color: var(--htb-question-dark-border) !important;
+  }
+
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li, div),
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li, div) {
+    color: var(--htb-question-dark-text) !important;
+  }
+
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-question-dark-muted) !important;
+  }
+
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i])
+    > :first-child,
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i])
+    > :first-child {
+    background-color: var(--htb-question-dark-header) !important;
+    color: var(--htb-question-dark-text) !important;
+    border-color: var(--htb-question-dark-border) !important;
+  }
+
+  main input[placeholder*="answer" i],
+  main textarea[placeholder*="answer" i] {
+    background-color: var(--htb-question-input-bg) !important;
+    color: var(--htb-question-input-text) !important;
+    border-color: var(--htb-question-dark-border) !important;
+  }
+
+  main input[placeholder*="answer" i]::placeholder,
+  main textarea[placeholder*="answer" i]::placeholder {
+    color: var(--htb-text-soft) !important;
+  }
+
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i])
+    pre,
+  main :is(section, article, div)[class]:has(input[placeholder*="answer" i])
+    pre *,
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i])
+    pre,
+  main :is(section, article, div)[class]:has(textarea[placeholder*="answer" i])
+    pre * {
+    background-color: var(--htb-code-bg) !important;
+    color: var(--htb-code-text) !important;
+    border-color: var(--htb-code-border) !important;
+  }
+
+  main :is(section, article, div)[class]:has(button, select)
+    :is([class*="pwn" i], [class*="vm" i], [class*="spawn" i], [class*="location" i]) {
+    background-color: var(--htb-pwnbox-panel-bg) !important;
+    color: var(--htb-pwnbox-text) !important;
+    border-color: var(--htb-code-border) !important;
+  }
+
+  main :is([class*="pwn" i], [class*="vm" i], [class*="spawn" i], [class*="location" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li, div) {
+    color: var(--htb-pwnbox-text) !important;
+  }
+
+  main :is([class*="pwn" i], [class*="vm" i], [class*="spawn" i], [class*="location" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-pwnbox-muted) !important;
+  }
+
+  main :is([class*="pwn" i], [class*="vm" i], [class*="spawn" i], [class*="location" i])
+    :is(input, select, button, .btn, [role="button"]) {
+    background-color: var(--htb-pwnbox-control-bg) !important;
+    color: var(--htb-pwnbox-text) !important;
+    border-color: var(--htb-code-border) !important;
+  }
+
+  main :is([class*="pwn" i], [class*="vm" i], [class*="spawn" i], [class*="location" i])
+    :is(.btn-primary, .btn-success, [class*="btn-primary" i], [class*="btn-success" i]) {
+    background-color: var(--htb-accent) !important;
+    color: var(--htb-text) !important;
+    border-color: var(--htb-accent) !important;
+  }
+
+  main :is(section, article, div)[class]:has([class*="location" i]),
+  main :is(section, article, div)[class]:has([class*="spawn" i]),
+  main :is(section, article, div)[class]:has([class*="pwn" i]) {
+    color: var(--htb-pwnbox-text) !important;
+  }
+
+  main :is(section, article, div)[class]:has([class*="location" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  main :is(section, article, div)[class]:has([class*="spawn" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  main :is(section, article, div)[class]:has([class*="pwn" i])
+    :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li) {
+    color: var(--htb-pwnbox-text) !important;
+  }
+
+  main :is(section, article, div)[class]:has([class*="location" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  main :is(section, article, div)[class]:has([class*="spawn" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  main :is(section, article, div)[class]:has([class*="pwn" i])
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-pwnbox-muted) !important;
   }
 }

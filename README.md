@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.3
+
+- Added structural Academy overrides for answer panels and Pwnbox controls that were not covered by class-name selectors.
+
 ### 1.0.2
 
 - Improved shell/code/Pwnbox contrast with a dark terminal palette and reinforced readable question panel text.
