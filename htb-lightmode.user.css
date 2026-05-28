@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.4
+@version        1.0.5
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -762,6 +762,76 @@
   [class*="terminal" i] [class*="warning" i],
   [class*="console" i] [class*="warning" i] {
     color: var(--htb-code-warning) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 3
+     ========================================================================== */
+
+  :root {
+    --htb-question-dark-text: #f8fafc;
+    --htb-question-dark-muted: #cbd5e1;
+    --htb-question-dark-placeholder: #94a3b8;
+  }
+
+  pre :is(span, mark, code, kbd, samp),
+  .hljs :is(span, mark, code, kbd, samp),
+  .shell :is(span, mark, code, kbd, samp),
+  .terminal :is(span, mark, code, kbd, samp),
+  .console :is(span, mark, code, kbd, samp),
+  .code-block :is(span, mark, code, kbd, samp),
+  .code-editor :is(span, mark, code, kbd, samp),
+  .command-output :is(span, mark, code, kbd, samp),
+  .command-line :is(span, mark, code, kbd, samp),
+  [class*="shell" i] :is(span, mark, code, kbd, samp),
+  [class*="terminal" i] :is(span, mark, code, kbd, samp),
+  [class*="console" i] :is(span, mark, code, kbd, samp),
+  [class*="code-block" i] :is(span, mark, code, kbd, samp),
+  [class*="code-editor" i] :is(span, mark, code, kbd, samp),
+  [class*="command-output" i] :is(span, mark, code, kbd, samp),
+  [class*="command-line" i] :is(span, mark, code, kbd, samp) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  [class*="question" i],
+  [class*="question" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="answer" i],
+  [class*="answer" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="assessment" i],
+  [class*="assessment" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="quiz" i],
+  [class*="quiz" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li) {
+    color: var(--htb-question-dark-text) !important;
+  }
+
+  [class*="question" i] :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  [class*="answer" i] :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  [class*="assessment" i] :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]),
+  [class*="quiz" i] :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-question-dark-muted) !important;
+  }
+
+  main input[placeholder*="answer" i],
+  main textarea[placeholder*="answer" i] {
+    color: var(--htb-text) !important;
+  }
+
+  main input[placeholder*="answer" i]::placeholder,
+  main textarea[placeholder*="answer" i]::placeholder {
+    color: var(--htb-question-dark-placeholder) !important;
+    opacity: 1 !important;
+  }
+
+  main :is(div, section, article)[class]:has(> input[placeholder*="answer" i])
+    :is(p, span, label, strong),
+  main :is(div, section, article)[class]:has(> textarea[placeholder*="answer" i])
+    :is(p, span, label, strong),
+  main :is(div, section, article)[class]:has(> form input[placeholder*="answer" i])
+    :is(p, span, label, strong),
+  main :is(div, section, article)[class]:has(> form textarea[placeholder*="answer" i])
+    :is(p, span, label, strong) {
+    color: var(--htb-question-dark-text) !important;
   }
 
 }

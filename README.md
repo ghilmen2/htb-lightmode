@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.5
+
+- Removed inline highlight backgrounds inside terminal output and added text-only contrast fixes for dark Academy question panels.
+
 ### 1.0.4
 
 - Removed question-bank and Pwnbox overrides so Academy interactive panels stay on HTB's default dark styling.
