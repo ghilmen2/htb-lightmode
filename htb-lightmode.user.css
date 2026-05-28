@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.9
+@version        1.0.10
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -831,6 +831,19 @@
   .container-inline-size:has(.pwnbox-options, .pwnbox-container, .pwnbox-footer)
     :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
     color: var(--htb-pwnbox-muted) !important;
+  }
+
+  #connection-panel .tab-pwnbox,
+  #connection-panel .tab-pwnbox *,
+  #connection-panel button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"],
+  #connection-panel button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"] * {
+    background-color: transparent !important;
+  }
+
+  #connection-panel .tab-pwnbox :is(.text-primary, .text-secondary),
+  #connection-panel button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"]
+    :is(.text-primary, .text-secondary) {
+    color: var(--htb-pwnbox-text) !important;
   }
 
 }

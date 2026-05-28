@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.10
+
+- Removed the light background from the Pwnbox tab/header while keeping scoped Pwnbox text contrast.
+
 ### 1.0.9
 
 - Added scoped Pwnbox text contrast fixes using the observed Pwnbox component structure.
