@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.1
+@version        1.0.2
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -696,5 +696,235 @@
   [class*="module-header" i] [class*="muted" i],
   [class*="path-header" i] [class*="muted" i] {
     color: var(--htb-hero-muted) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 2
+     ========================================================================== */
+
+  :root {
+    --htb-code-bg: #0f172a;
+    --htb-code-text: #e5e7eb;
+    --htb-code-muted: #cbd5e1;
+    --htb-code-border: #334155;
+    --htb-code-command: #86efac;
+    --htb-code-output: #bae6fd;
+    --htb-code-warning: #fde68a;
+    --htb-question-title: #111827;
+    --htb-question-text: #243244;
+  }
+
+  pre,
+  pre code,
+  .hljs,
+  .shell,
+  .terminal,
+  .console,
+  .code-block,
+  .code-editor,
+  .command-output,
+  .command-line,
+  .pwnbox,
+  [class*="shell" i],
+  [class*="terminal" i],
+  [class*="console" i],
+  [class*="code-block" i],
+  [class*="code-editor" i],
+  [class*="command-output" i],
+  [class*="command-line" i],
+  [class*="pwnbox" i] {
+    background-color: var(--htb-code-bg) !important;
+    color: var(--htb-code-text) !important;
+    border-color: var(--htb-code-border) !important;
+  }
+
+  pre *,
+  .hljs *,
+  .shell *,
+  .terminal *,
+  .console *,
+  .code-block *,
+  .code-editor *,
+  .command-output *,
+  .command-line *,
+  .pwnbox *,
+  [class*="shell" i] *,
+  [class*="terminal" i] *,
+  [class*="console" i] *,
+  [class*="code-block" i] *,
+  [class*="code-editor" i] *,
+  [class*="command-output" i] *,
+  [class*="command-line" i] *,
+  [class*="pwnbox" i] * {
+    color: var(--htb-code-text) !important;
+  }
+
+  pre .text-muted,
+  .hljs-comment,
+  .hljs-meta,
+  .shell .text-muted,
+  .terminal .text-muted,
+  .console .text-muted,
+  .code-block .text-muted,
+  .code-editor .text-muted,
+  .command-output .text-muted,
+  .pwnbox .text-muted,
+  [class*="shell" i] [class*="muted" i],
+  [class*="terminal" i] [class*="muted" i],
+  [class*="console" i] [class*="muted" i],
+  [class*="code-block" i] [class*="muted" i],
+  [class*="code-editor" i] [class*="muted" i],
+  [class*="command-output" i] [class*="muted" i],
+  [class*="pwnbox" i] [class*="muted" i] {
+    color: var(--htb-code-muted) !important;
+  }
+
+  .hljs-built_in,
+  .hljs-keyword,
+  .hljs-name,
+  .hljs-title,
+  .hljs-variable,
+  .shell .prompt,
+  .terminal .prompt,
+  .console .prompt,
+  .command-line .prompt,
+  [class*="shell" i] [class*="prompt" i],
+  [class*="terminal" i] [class*="prompt" i],
+  [class*="console" i] [class*="prompt" i],
+  [class*="command-line" i] [class*="prompt" i] {
+    color: var(--htb-code-command) !important;
+  }
+
+  .hljs-attr,
+  .hljs-number,
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-template-variable,
+  .shell .output,
+  .terminal .output,
+  .console .output,
+  .command-output .output,
+  [class*="shell" i] [class*="output" i],
+  [class*="terminal" i] [class*="output" i],
+  [class*="console" i] [class*="output" i],
+  [class*="command-output" i] [class*="output" i] {
+    color: var(--htb-code-output) !important;
+  }
+
+  .hljs-deletion,
+  .hljs-literal,
+  .hljs-regexp,
+  .hljs-warning,
+  .shell .warning,
+  .terminal .warning,
+  .console .warning,
+  [class*="shell" i] [class*="warning" i],
+  [class*="terminal" i] [class*="warning" i],
+  [class*="console" i] [class*="warning" i] {
+    color: var(--htb-code-warning) !important;
+  }
+
+  .question,
+  .answer,
+  .question-panel,
+  .answer-panel,
+  .question-card,
+  .answer-card,
+  [class*="question" i],
+  [class*="answer" i],
+  [class*="assessment" i],
+  [class*="quiz" i] {
+    background-color: var(--htb-question-bg) !important;
+    color: var(--htb-question-text) !important;
+    border-color: var(--htb-question-border) !important;
+  }
+
+  .question :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  .answer :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  .question-panel :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  .answer-panel :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  .question-card :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  .answer-card :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="question" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="answer" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="assessment" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li),
+  [class*="quiz" i] :is(h1, h2, h3, h4, h5, h6, p, span, label, strong, li) {
+    color: var(--htb-question-text) !important;
+  }
+
+  .question :is(h1, h2, h3, h4, h5, h6, strong),
+  .answer :is(h1, h2, h3, h4, h5, h6, strong),
+  .question-panel :is(h1, h2, h3, h4, h5, h6, strong),
+  .answer-panel :is(h1, h2, h3, h4, h5, h6, strong),
+  .question-card :is(h1, h2, h3, h4, h5, h6, strong),
+  .answer-card :is(h1, h2, h3, h4, h5, h6, strong),
+  [class*="question" i] :is(h1, h2, h3, h4, h5, h6, strong),
+  [class*="answer" i] :is(h1, h2, h3, h4, h5, h6, strong),
+  [class*="assessment" i] :is(h1, h2, h3, h4, h5, h6, strong),
+  [class*="quiz" i] :is(h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-question-title) !important;
+  }
+
+  .question pre,
+  .question pre *,
+  .answer pre,
+  .answer pre *,
+  .question-panel pre,
+  .question-panel pre *,
+  .answer-panel pre,
+  .answer-panel pre *,
+  .question-card pre,
+  .question-card pre *,
+  .answer-card pre,
+  .answer-card pre *,
+  [class*="question" i] pre,
+  [class*="question" i] pre *,
+  [class*="answer" i] pre,
+  [class*="answer" i] pre *,
+  [class*="assessment" i] pre,
+  [class*="assessment" i] pre *,
+  [class*="quiz" i] pre,
+  [class*="quiz" i] pre * {
+    background-color: var(--htb-code-bg) !important;
+    color: var(--htb-code-text) !important;
+    border-color: var(--htb-code-border) !important;
+  }
+
+  .question pre .text-muted,
+  .answer pre .text-muted,
+  .question-panel pre .text-muted,
+  .answer-panel pre .text-muted,
+  .question-card pre .text-muted,
+  .answer-card pre .text-muted,
+  [class*="question" i] pre [class*="muted" i],
+  [class*="answer" i] pre [class*="muted" i],
+  [class*="assessment" i] pre [class*="muted" i],
+  [class*="quiz" i] pre [class*="muted" i] {
+    color: var(--htb-code-muted) !important;
+  }
+
+  .question pre .hljs-comment,
+  .question pre .hljs-meta,
+  .answer pre .hljs-comment,
+  .answer pre .hljs-meta,
+  [class*="question" i] pre .hljs-comment,
+  [class*="question" i] pre .hljs-meta,
+  [class*="answer" i] pre .hljs-comment,
+  [class*="answer" i] pre .hljs-meta {
+    color: var(--htb-code-muted) !important;
+  }
+
+  .question pre :is(.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-title, .hljs-variable, .prompt),
+  .answer pre :is(.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-title, .hljs-variable, .prompt),
+  [class*="question" i] pre :is(.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-title, .hljs-variable, .prompt),
+  [class*="answer" i] pre :is(.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-title, .hljs-variable, .prompt) {
+    color: var(--htb-code-command) !important;
+  }
+
+  .question pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output),
+  .answer pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output),
+  [class*="question" i] pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output),
+  [class*="answer" i] pre :is(.hljs-attr, .hljs-number, .hljs-string, .hljs-symbol, .hljs-template-variable, .output) {
+    color: var(--htb-code-output) !important;
   }
 }

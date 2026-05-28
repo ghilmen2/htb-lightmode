@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.2
+
+- Improved shell/code/Pwnbox contrast with a dark terminal palette and reinforced readable question panel text.
+
 ### 1.0.1
 
 - Added Fix pass 1 for safer hover states, readable question panels, dark terminal/Pwnbox contrast, and readable module/path hero text.
