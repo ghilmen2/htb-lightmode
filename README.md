@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.4
+
+- Removed question-bank and Pwnbox overrides so Academy interactive panels stay on HTB's default dark styling.
+
 ### 1.0.3
 
 - Added structural Academy overrides for answer panels and Pwnbox controls that were not covered by class-name selectors.
