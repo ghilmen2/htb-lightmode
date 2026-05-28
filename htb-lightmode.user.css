@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.8
+@version        1.0.9
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -806,6 +806,31 @@
   #questions-list .collapse-title :is(h1, h2, h3, h4, h5, h6, p, span, strong),
   #questions-list .collapse-content :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
     color: var(--htb-question-bank-muted) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 5
+     ========================================================================== */
+
+  :root {
+    --htb-pwnbox-text: #f8fafc;
+    --htb-pwnbox-muted: #cbd5e1;
+    --htb-pwnbox-alert-text: #eaf2ff;
+  }
+
+  .container-inline-size:has(.pwnbox-options, .pwnbox-container, .pwnbox-footer)
+    p.text-primary {
+    color: var(--htb-pwnbox-alert-text) !important;
+  }
+
+  .container-inline-size:has(.pwnbox-options, .pwnbox-container, .pwnbox-footer)
+    :is(label, p, span, strong):not(button *, .htb-button *) {
+    color: var(--htb-pwnbox-text) !important;
+  }
+
+  .container-inline-size:has(.pwnbox-options, .pwnbox-container, .pwnbox-footer)
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+    color: var(--htb-pwnbox-muted) !important;
   }
 
 }

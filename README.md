@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.9
+
+- Added scoped Pwnbox text contrast fixes using the observed Pwnbox component structure.
+
 ### 1.0.8
 
 - Added a scoped `#questions-list` override for Academy question text based on the observed DOM structure.
