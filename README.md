@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.15
+
+- Added direct path-progress card row overrides and restored the path-progress page background to light mode.
+
 ### 1.0.14
 
 - Overrode the exact `hover:!bg-neutral-600` class causing dark overlays on enrolled path rows.

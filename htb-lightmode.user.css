@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.14
+@version        1.0.15
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         ghilmen2
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -1040,6 +1040,54 @@
   [id^="headlessui-tabs-panel"]
     .base-card.card-row[class*="hover:!bg-neutral-600"]:hover
     :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 10
+     ========================================================================== */
+
+  main:has(.path-in-progress),
+  main:has(.path-in-progress) > div,
+  main:has(.path-in-progress) section {
+    background-color: var(--htb-bg) !important;
+    color: var(--htb-text) !important;
+  }
+
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"],
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover,
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:focus,
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:focus-within {
+    background-color: #ffffff !important;
+    color: var(--htb-path-row-text) !important;
+    border-color: var(--htb-path-row-border) !important;
+  }
+
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover > *,
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover .flex,
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover .grid {
+    background-color: transparent !important;
+  }
+
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]
+    :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong),
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover
+    :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-path-row-text) !important;
+  }
+
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]
+    :is(.text-secondary, .card-details, .tag-title, .percentage, span, p),
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover
+    :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]
+    :is(.badge, .tag, .tag-item, .tag-container),
+  .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover
+    :is(.badge, .tag, .tag-item, .tag-container) {
+    background-color: var(--htb-bg-muted) !important;
     color: var(--htb-path-row-muted) !important;
   }
 }
