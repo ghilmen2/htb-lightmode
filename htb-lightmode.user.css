@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.12
+@version        1.0.13
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
-@author         Gabriel
+@author         ghilmen2
 @homepageURL    https://github.com/gabriel/htb-lightmode
 @supportURL     https://github.com/gabriel/htb-lightmode/issues
 @license        MIT
@@ -804,7 +804,9 @@
 
   #questions-list .collapse-title,
   #questions-list .collapse-title :is(h1, h2, h3, h4, h5, h6, p, span, strong),
-  #questions-list .collapse-content :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
+  #questions-list
+    .collapse-content
+    :is(.text-muted, small, [class*="muted" i], [class*="secondary" i]) {
     color: var(--htb-question-bank-muted) !important;
   }
 
@@ -841,7 +843,8 @@
   }
 
   #connection-panel .tab-pwnbox :is(.text-primary, .text-secondary),
-  #connection-panel button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"]
+  #connection-panel
+    button[role="tab"][aria-controls*="tabpanel-v-0-1-0-7"]
     :is(.text-primary, .text-secondary) {
     color: var(--htb-pwnbox-text) !important;
   }
@@ -871,11 +874,15 @@
     color: var(--htb-rank-card-text) !important;
   }
 
-  [class*="htb-xp-rank-card"] .rank-info :is(.htb-text-primary, .htb-heading-lg, .htb-body-md) {
+  [class*="htb-xp-rank-card"]
+    .rank-info
+    :is(.htb-text-primary, .htb-heading-lg, .htb-body-md) {
     color: var(--htb-rank-card-text) !important;
   }
 
-  [class*="htb-xp-rank-card"] .rank-info :is(.htb-text-secondary, .htb-body-sm, .htb-body-lg) {
+  [class*="htb-xp-rank-card"]
+    .rank-info
+    :is(.htb-text-secondary, .htb-body-sm, .htb-body-lg) {
     color: var(--htb-rank-card-muted) !important;
   }
 
@@ -926,15 +933,21 @@
     box-shadow: var(--htb-shadow-sm) !important;
   }
 
-  [id^="headlessui-tabs-panel"] .card-row :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
+  [id^="headlessui-tabs-panel"]
+    .card-row
+    :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
     color: var(--htb-path-row-text) !important;
   }
 
-  [id^="headlessui-tabs-panel"] .card-row :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+  [id^="headlessui-tabs-panel"]
+    .card-row
+    :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
     color: var(--htb-path-row-muted) !important;
   }
 
-  [id^="headlessui-tabs-panel"] .card-row :is(.badge, .tag, .tag-item, .tag-container) {
+  [id^="headlessui-tabs-panel"]
+    .card-row
+    :is(.badge, .tag, .tag-item, .tag-container) {
     background-color: var(--htb-bg-muted) !important;
     color: var(--htb-path-row-muted) !important;
   }
@@ -945,4 +958,57 @@
     opacity: 0 !important;
   }
 
+  /* ==========================================================================
+     Fix pass 8
+     ========================================================================== */
+
+  :root {
+    --htb-path-header-bg: #ffffff;
+    --htb-path-header-surface: #f6f8fb;
+    --htb-path-header-text: #18212f;
+    --htb-path-header-muted: #526071;
+    --htb-path-header-border: #d8e0e8;
+  }
+
+  main:has(.path-header),
+  main:has(.path-header) > section {
+    background-color: var(--htb-bg) !important;
+    color: var(--htb-text) !important;
+  }
+
+  main:has(.path-header) .path-header {
+    background-color: var(--htb-path-header-bg) !important;
+    color: var(--htb-path-header-text) !important;
+    border: 1px solid var(--htb-path-header-border) !important;
+    border-radius: var(--htb-radius-md) !important;
+    box-shadow: var(--htb-shadow-sm) !important;
+  }
+
+  main:has(.path-header) .path-header :is(.text-primary, .htb-text-primary, h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-path-header-text) !important;
+  }
+
+  main:has(.path-header) .path-header :is(.text-secondary, .htb-text-secondary, p, span, li, .path-in-progress) {
+    color: var(--htb-path-header-muted) !important;
+  }
+
+  main:has(.path-header) .path-header :is(.badge, .tag, [class*="tag" i]) {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-path-header-muted) !important;
+  }
+
+  main:has(.path-header) .path-header .path-in-progress {
+    background-color: var(--htb-path-header-surface) !important;
+    border-color: var(--htb-path-header-border) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row:hover > *,
+  [id^="headlessui-tabs-panel"] .card-row:hover > * > :is(div, section, article),
+  [id^="headlessui-tabs-panel"] .card-row:hover :is(.flex, .grid):not(.badge, .tag, .tag-item, .tag-container, .module-progress) {
+    background-color: transparent !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row:hover :is([class*="bg-neutral-600"], [class*="bg-neutral-700"], [class*="bg-neutral-800"], [class*="bg-neutral-900"], [class*="bg-neutral-1000"]) {
+    background-color: transparent !important;
+  }
 }

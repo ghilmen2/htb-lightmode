@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.13
+
+- Restored the path detail header to the light theme and strengthened enrolled path row hover cleanup.
+
 ### 1.0.12
 
 - Added scoped hover cleanup for Academy enrolled path rows to avoid the dark overlay effect.
