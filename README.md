@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.12
+
+- Added scoped hover cleanup for Academy enrolled path rows to avoid the dark overlay effect.
+
 ### 1.0.11
 
 - Added scoped dashboard rank card styling for the main Academy profile card.

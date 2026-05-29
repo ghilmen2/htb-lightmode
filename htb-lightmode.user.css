@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.11
+@version        1.0.12
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         Gabriel
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -898,6 +898,51 @@
 
   [class*="htb-xp-rank-card"] .grade-diamond {
     border-color: var(--htb-rank-card-muted) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 7
+     ========================================================================== */
+
+  :root {
+    --htb-path-row-bg: #ffffff;
+    --htb-path-row-hover-bg: #f8fbf2;
+    --htb-path-row-text: #18212f;
+    --htb-path-row-muted: #526071;
+    --htb-path-row-border: #d8e0e8;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row,
+  [id^="headlessui-tabs-panel"] .card-row:hover,
+  [id^="headlessui-tabs-panel"] .card-row:focus,
+  [id^="headlessui-tabs-panel"] .card-row:focus-within {
+    background-color: var(--htb-path-row-bg) !important;
+    color: var(--htb-path-row-text) !important;
+    border-color: var(--htb-path-row-border) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row:hover {
+    background-color: var(--htb-path-row-hover-bg) !important;
+    box-shadow: var(--htb-shadow-sm) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-path-row-text) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row :is(.badge, .tag, .tag-item, .tag-container) {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  [id^="headlessui-tabs-panel"] .card-row::before,
+  [id^="headlessui-tabs-panel"] .card-row::after {
+    background: transparent !important;
+    opacity: 0 !important;
   }
 
 }
