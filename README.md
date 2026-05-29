@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.14
+
+- Overrode the exact `hover:!bg-neutral-600` class causing dark overlays on enrolled path rows.
+
 ### 1.0.13
 
 - Restored the path detail header to the light theme and strengthened enrolled path row hover cleanup.

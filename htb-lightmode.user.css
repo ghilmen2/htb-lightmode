@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.13
+@version        1.0.14
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         ghilmen2
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -1010,5 +1010,36 @@
 
   [id^="headlessui-tabs-panel"] .card-row:hover :is([class*="bg-neutral-600"], [class*="bg-neutral-700"], [class*="bg-neutral-800"], [class*="bg-neutral-900"], [class*="bg-neutral-1000"]) {
     background-color: transparent !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 9
+     ========================================================================== */
+
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row.hover\:\!bg-neutral-600:hover,
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row[class*="hover:!bg-neutral-600"]:hover {
+    background-color: #ffffff !important;
+    color: var(--htb-path-row-text) !important;
+    border-color: var(--htb-path-row-border) !important;
+  }
+
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row.hover\:\!bg-neutral-600:hover
+    :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong),
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row[class*="hover:!bg-neutral-600"]:hover
+    :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-path-row-text) !important;
+  }
+
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row.hover\:\!bg-neutral-600:hover
+    :is(.text-secondary, .card-details, .tag-title, .percentage, span, p),
+  [id^="headlessui-tabs-panel"]
+    .base-card.card-row[class*="hover:!bg-neutral-600"]:hover
+    :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+    color: var(--htb-path-row-muted) !important;
   }
 }
