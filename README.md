@@ -41,6 +41,10 @@ Most colors and reusable values are defined as CSS variables under `:root`, maki
 
 ## Changelog
 
+### 1.0.16
+
+- Added card row container hover overrides using the full background shorthand to remove the remaining dark path row layer.
+
 ### 1.0.15
 
 - Added direct path-progress card row overrides and restored the path-progress page background to light mode.

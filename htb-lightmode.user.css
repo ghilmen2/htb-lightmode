@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HTB Light Mode
 @namespace      github.com/gabriel/htb-lightmode
-@version        1.0.15
+@version        1.0.16
 @description    Clean light theme for Hack The Box, HTB App, and HTB Academy.
 @author         ghilmen2
 @homepageURL    https://github.com/gabriel/htb-lightmode
@@ -1087,6 +1087,44 @@
     :is(.badge, .tag, .tag-item, .tag-container),
   .base-card.group.card-row[class*="hover:!bg-neutral-600"]:hover
     :is(.badge, .tag, .tag-item, .tag-container) {
+    background-color: var(--htb-bg-muted) !important;
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  /* ==========================================================================
+     Fix pass 11
+     ========================================================================== */
+
+  .card-row-container:hover,
+  .card-row-container:hover .base-card.card-row,
+  .card-row-container:hover .base-card.group.card-row,
+  .card-row-container:focus .base-card.card-row,
+  .card-row-container:focus-within .base-card.card-row {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: var(--htb-path-row-text) !important;
+  }
+
+  .card-row-container:hover .base-card.card-row > *,
+  .card-row-container:hover .base-card.card-row :is(.flex, .grid, .base-card, section, article, div):not(.badge, .tag, .tag-item, .tag-container, .module-progress) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  .card-row-container:hover .base-card.card-row :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong),
+  .card-row-container:focus-within .base-card.card-row :is(.text-primary, .path-title, h1, h2, h3, h4, h5, h6, strong) {
+    color: var(--htb-path-row-text) !important;
+  }
+
+  .card-row-container:hover .base-card.card-row :is(.text-secondary, .card-details, .tag-title, .percentage, span, p),
+  .card-row-container:focus-within .base-card.card-row :is(.text-secondary, .card-details, .tag-title, .percentage, span, p) {
+    color: var(--htb-path-row-muted) !important;
+  }
+
+  .card-row-container:hover .base-card.card-row :is(.badge, .tag, .tag-item, .tag-container) {
+    background: var(--htb-bg-muted) !important;
     background-color: var(--htb-bg-muted) !important;
     color: var(--htb-path-row-muted) !important;
   }
