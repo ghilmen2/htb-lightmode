@@ -24,13 +24,5 @@ If the install prompt does not open, create a new style in Stylus and paste in t
 - The theme focuses on making the main HTB surfaces light while keeping terminal-like areas readable.
 - Some HTB Academy panels are intentionally left dark when the original component works better that way.
 - HTB changes its markup from time to time, so a page may need a small selector fix after a site update.
+- Some areas still are not working in light mode, especially hover areas, however the core reading experience of the modules are working in light mode so there should be no issues with readability
 
-## Changelog
-
-### 1.0.16
-
-- Cleaned up the last dark hover layer on enrolled Academy path rows.
-
-### Earlier 1.0.x releases
-
-- Improved Academy path rows, path headers, profile rank cards, Pwnbox text, question panels, terminal output, hover states, and general contrast across HTB pages.
